@@ -1,0 +1,6 @@
+{
+  "name": "LEOX | Premium Photography, Videography & Reels",
+  "description": "Premium photography, videography, Instagram reels and event-content booking platform by LeoX.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
