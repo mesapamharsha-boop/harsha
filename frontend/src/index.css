@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* =========================================
+   LEOX REEL MARQUEE
+========================================= */
+
+.reel-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: reel-horizontal 25s linear infinite;
+  will-change: transform;
+}
+
+@keyframes reel-horizontal {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause when mouse is over the reels */
+.reel-track:hover {
+  animation-play-state: paused;
+}
+
+/* =========================================
+   BASE
+========================================= */
+
+@layer base {
+  :root {
+    --brand-red: #E50914;
+    --brand-red-hover: #FF2E36;
+    --bg-dark: #08080a;
+    --bg-card: #12131a;
+  }
+
+  body {
+    background-color: #08080a;
+    color: #f2f2f4;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-heading {
+    font-family: 'Space Grotesk',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      sans-serif;
+
+    letter-spacing: -0.02em;
+  }
+}
+
+/* =========================================
+   CUSTOM SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0e12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252834;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E50914;
+}
+
+/* =========================================
+   CINEMATIC UTILITIES
+========================================= */
+
+.cinematic-glass {
+  background: rgba(18, 19, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cinematic-glow {
+  box-shadow: 0 0 35px -5px rgba(229, 9, 20, 0.35);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
